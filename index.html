@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Into JS</h1>
+
+
+<script src="/js/scriprs.js"></script>
+<script>
+    /*первое занятие
+    //console.log("Пытаюсь вывести street", street);//не работает таким образом
+   var name = "Sofia";
+
+    let street = "Ленинский проспект";
+    if (1){
+        const street2 = "Лени Голикова";
+        console.log("Пытаюсь вывести street #2", street2)
+    }
+    console.log("Пытаюсь вывести street", street);//работает
+    //console.log("Еще раз пытаюсь вывести street2", street2);// не может найти
+    const houseWorker = 10;
+    street = 19;
+
+     city = "СПБ";
+   // test(someValue);
+    console.log("привет,этот мир",name, street);
+
+
+
+    const person1 = {};
+
+    const person2 = {
+        name : "Igor",// тип строка
+        age : 27,//тип число
+    };
+    console.log("person1(1): ", person1);
+    person1.institute = "MATI";
+
+    console.log("person1(2): ", person1);
+
+    person1.privet = person2;
+    console.log("person1(3): ", person1);
+
+    console.log("person2(1): ", person2);
+
+    person1.privet.age= 100;
+    console.log("person2(2): ", person2);
+
+    //создать объект с 5 полями
+    //1) фамилия
+    //2) имя
+    //3) отчество
+    //4) возвраст
+    //5)телефон в виде объекта с 3мя полями 1)код страны 2)код региона 3) номер телефона
+    // {x:5}
+    // user.field_name
+
+     */
+    /*второе занятие
+/*
+    var a = 0;
+    var b = '0';
+
+    var person = {
+        name : "Sofia",
+        age: 30,
+        address:'Ленинский проспект 55',
+        toString: function () {
+            return this.name + ',' +',age:' + this.age + ',' + this.address;
+            //this.age;
+        },
+        valueOf: function () {
+            return this.age;
+        }
+    }
+    console.log('PERSON string = ', person + 'комментарий');
+    console.log('PERSON number = ', person + 500);
+
+
+    console.log(new Date);
+    console.log(' ' + new Date);
+
+/*null undefined
+    console.log('NULL vs UNDEFIEND', null === undefined);
+
+    var N;
+    console.log('N = ', N);
+    console.log('1)person.city = ',JSON.stringify( person), person);
+
+    person.city = 10;
+    console.log('2)person.city = ',JSON.stringify( person));
+
+    var person3 = null;//идеальный вариант использования пустой переменной
+
+/*циклы
+    var userAdress = "Лени Голикова дом 15";
+    var i = 0;// инициализация счетчика
+
+    for (;i < userAdress.length;i++){
+        console.log("index ['", i, "] = ", userAdress[i]);
+    }
+
+
+    for (var j = 0;j < userAdress.length; j++) {
+        if (!((j+1) %2 )){
+            continue;
+        }
+        console.log("index2 [", j , "] =", userAdress[j]);
+
+        if (j >10){
+            break;
+        }
+    }
+
+  d = 0;
+    while( d < userAdress.length){
+        console.log("index3 [", d , "] =", userAdress[d]);
+        d++;
+    }
+
+    c = 0;
+    do {
+        console.log("index4 [", c , "] =", userAdress[c]);
+        c++;
+    }
+    while( c < userAdress.length)
+
+
+
+var str2 = "some text";
+
+console.log(str2.length, String(5465468).length);//длина строки
+console.log(+"234234234",Number("234234234"));// Number("234234234")
+
+     console.log(str2.toUpperCase(), str2.toLowerCase());//верхний и нижний регистр
+
+    console.log("символ из позиции 4", str2.charAt(3));// символ из позиции 4
+
+    console.log("кусок строки начинается = ", str2.indexOf("text"),  str2.indexOf("sdfsd"));
+
+    //substring, substr, slice
+    console.log("подстрока c 2 по 4", str2.substring(2,4) );
+    console.log("подстрока с 2 плюс длина 4 символа", str2.substr(2,4));
+    console.log("подстрока тоже что и substring, только с конца", str2.slice(0,4));
+
+
+    //ЧИСЛА Number
+
+    var k = 200;
+    var h = 0xC8;//шестандцатиричная система счисления
+    console.log('Чилса:', k , h);
+
+    console.log(' делим 200 на 0 ', k / 0, isFinite(k/0));
+
+    console.log(' parseInt/ parseFloat', parseInt('232.54', 10),parseFloat('232.54', 10));
+
+
+    console.log("Округление Math.floor= ",Math.floor(3.5543));
+    console.log("Округление Math.ceil=",Math.ceil(3.5543));
+    console.log("Округление Math.round=",Math.round(3.5543));
+
+    var v = 3.45;
+    var m = 3.45;
+console.log('Сравнить  v  === m', v === m);
+
+//масивы
+    var ms = [];
+    var ms2 = new Array('smolens','murmansk');
+    var ms3 = ['smolens','murmansk'];
+
+    console.log('пустой массив',ms);
+    ms[0] = "samara";
+    ms[5] = "moscow"
+    console.log('пустой массив',ms);
+    console.log('второй массив',ms2);
+    console.log('третий массив',ms3);
+
+    ms3 [10] = " Десятный элемент";
+    ms3.push('kirov');//добавляет в созданный уже массив
+    console.log('третий массив№2', ms3);
+    ms3.push(['kirov','magadan']);//добавляет массив в массиве
+    console.log('третий массив№3', ms3);
+    ms3.push( 6, {name: "Sofia"});//добавляет число и объект
+    console.log('третий массив№4', ms3);
+
+    ms3.pop();//удаление последнего участка массива
+    console.log('третий массив удаление через РОР №3', ms3);
+
+   var tmp =  ms3.shift();//удаляет что то из начала массива
+    console.log('третий массив shift',tmp, ms3);
+
+    //Перебор элементов
+    for(var k = 0;k < ms3.length;k++) {
+        console.log('Элемент ', k, "=", ms3[k]);
+    }
+
+console.log('FOR IN');//делает то же самое, только пропускает все undefiend
+    for (var o in ms3) {
+        console.log('Элемент', o, "=", ms3[o]);
+    }
+
+    console.log('FOR EACH');// делает тоже самое что и FOR IN
+    ms3.forEach((item, index) =>{
+        console.log('Элемент', index, "=", item);
+    })
+
+    //ВСТРОЕННЫЕ МЕТОДЫ
+
+    var string1 = "Санкт Петербург, Москва, Архангельск, Мурманск, Владивосток";
+    var cities = string1.split(", ");
+    console.log('SPLIT', string1, cities);//возвращает массив,убирает разделители
+    //console.log('JOIN', cities.join("-"));// приминяется к массивам, склеивает массив в строку при помощи разделителя
+    //delete позволяет удалить свойство объекта
+    //delete cities[2];
+    //console.log('AFER delete', cities );//можно удалить что то из массива
+
+    //splice - удаляет, вставляет
+    //console.log("SPLICE", cities.splice(0,1), cities);//удаляет из массива и возвращает этот удаленный массив,нет пустых мест
+    //console.log("SPLICE", cities.splice(0,2,"Гватемала","Сочи"), cities);//удаляет и вставляет взамен удаленных
+    //console.log("SPLICE", cities.splice(1,0,"Минск"), cities);//просто вставляет
+
+    //SLICE
+    var citiesCopy = cities.slice();
+    cities[0] = "New York";
+    console.log("SLICE", citiesCopy, cities);//копирует все данные из другого массива,не по ссылке, а просто делает дубликат
+
+    //REVERS
+console.log("REVERS = ", cities.reverse());//зеркальное отражение массивов
+
+    //
+    var newCities = cities.concat("Boston","Los Angeles");//копирование оригинального массива + добавление чего то в конец
+    console.log("CONCAT = ", newCities);
+
+     */
+
+</script>
+
+</body>
+</html>
